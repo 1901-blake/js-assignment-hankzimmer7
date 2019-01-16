@@ -11,7 +11,7 @@ function bubbleSort(numArray) {
         arraySorted = true;
         //Loop through the array
         for (let i = 0; i < sortedArray.length; i++) {
-            //If a value is great than the number to the right of it, swap the numbers and mark the array as not sorted
+            //If a value is greater than the number to the right of it, swap the numbers and mark the array as not sorted
             if (sortedArray[i] > sortedArray[i + 1]) {
                 let temp = sortedArray[i + 1];
                 sortedArray[i + 1] = sortedArray[i];
