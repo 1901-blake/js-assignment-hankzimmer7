@@ -12,6 +12,9 @@ function fib(n) {
     return currentNumber;
 }
 
-let position = 1000;
-let result = fib(position);
-console.log(`Number ${position} in the Fibonacci sequence is ${result}`);
+//Test the code
+let maxNumber = 20;
+for (let i = 0; i < maxNumber; i++) {
+    let result = fib(i);
+    console.log(`Number ${i} in the Fibonacci sequence is ${result}`);
+}
