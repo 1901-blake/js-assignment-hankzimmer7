@@ -13,7 +13,7 @@ function fib(n) {
 }
 
 //Test the code
-let maxNumber = 20;
+let maxNumber = 50;
 for (let i = 0; i < maxNumber; i++) {
     let result = fib(i);
     console.log(`Number ${i} in the Fibonacci sequence is ${result}`);
