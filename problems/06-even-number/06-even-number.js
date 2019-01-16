@@ -11,6 +11,7 @@ function isEven(someNum) {
     };  
 }
 
+//Test the function
 let input = 45;
 let result = isEven(input);
 console.log(`Is ${input} an even number? ${result}`);
