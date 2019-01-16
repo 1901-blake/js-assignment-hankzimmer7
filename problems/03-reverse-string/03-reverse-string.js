@@ -12,4 +12,4 @@ function reverseStr(someStr) {
 //Test the function
 inputString = "Hello World";
 reversed = reverseStr(inputString);
-console.log(reversed);
+console.log(`The reverse of ${inputString} is ${reversed}`);
