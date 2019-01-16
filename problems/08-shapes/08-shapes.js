@@ -45,7 +45,8 @@ function printShape(shape, height, character) {
       for (let i = 0; i <= height; i++) {
         let line = '';
         for (let j = 0; j <= height; j++) {
-          if (Math.abs(((height - 1) / 2) - i) + Math.abs((height - 1) / 2 - j) < height / 2) {
+          let distanceFromCenter = Math.abs(((height - 1) / 2) - i) + Math.abs((height - 1) / 2 - j);
+          if (distanceFromCenter < height / 2) {
             line += character;
           } else {
             line += ' ';
