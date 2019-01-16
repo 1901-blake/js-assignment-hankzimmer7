@@ -35,63 +35,20 @@ function printShape(shape, height, character) {
     case 'Triangle':
       for (let i = 0; i < height; i++) {
         let line = '';
-        for (let j = 0; j < height; j++) {
-          if (i >= j) {
-            line += character;
-          } else {
-            line += ' ';
-          }
+        for (let j = 0; j <= i; j++) {
+          line += character;
         }
         console.log(line);
       }
       break;
     case 'Diamond':
-      //Loop over rows
-      for (let i = 0; i < height; i++) {
+      for (let i = 0; i <= height; i++) {
         let line = '';
-        //Loop over columns
-        for (let j = 0; j < height; j++) {
-          //Middle Lines
-          if (i === Math.floor(height / 2) || j === Math.floor(height / 2)) {
+        for (let j = 0; j <= height; j++) {
+          if (Math.abs(((height - 1) / 2) - i) + Math.abs((height - 1) / 2 - j) < height / 2) {
             line += character;
-          }
-          //Upper Half
-          else if (i < height / 2) {
-            //Upper Left Corner
-            if (j < (height) / 2) {
-              if (j + i > (height) / 2 - 1) {
-                line += character;
-              } else {
-                line += ' ';
-              }
-            }
-            //Upper Right Corner
-            else if (j > (height) / 2) {
-              if (j < i + (height) / 2) {
-                line += character;
-              } else {
-                line += ' ';
-              }
-            }
-          }
-          //Lower Half
-          else {
-            //Lower Left Corner
-            if (j < (height) / 2) {
-              if (i - (height) / 2 <= j) {
-                line += character;
-              } else {
-                line += ' ';
-              }
-            }
-            //Lower Right Corner
-            if (j > (height) / 2) {
-              if (i + j <= 1.5 * (height) - 1) {
-                line += character;
-              } else {
-                line += ' ';
-              }
-            }
+          } else {
+            line += ' ';
           }
         }
         console.log(line);
@@ -103,17 +60,6 @@ function printShape(shape, height, character) {
 }
 
 //Test the function
-let inputShape = 'Square';
-let inputHeight = 7;
-let intputCharacter = 'S';
-printShape(inputShape, inputHeight, intputCharacter);
-
-inputShape = 'Triangle';
-inputHeight = 8;
-intputCharacter = 'T';
-printShape(inputShape, inputHeight, intputCharacter);
-
-inputShape = 'Diamond';
-inputHeight = 9;
-intputCharacter = '*';
-printShape(inputShape, inputHeight, intputCharacter);
+printShape('Square', 7, 'S');
+printShape('Triangle', 8, 'T');
+printShape('Diamond', 9, 'D');
