@@ -9,6 +9,7 @@ function reverseStr(someStr) {
     return reversed;
 }
 
+//Test the function
 inputString = "Hello World";
 reversed = reverseStr(inputString);
 console.log(reversed);

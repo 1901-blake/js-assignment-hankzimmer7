@@ -23,6 +23,7 @@ function bubbleSort(numArray) {
     return sortedArray;
 }
 
+//Test the function
 let initialArray = [9999999, 23, 5, 6, -50, 7, 8886, 4, 34525, -12, 23, 0, 12, -554, 23, 1];
 console.log('Initial Array', initialArray);
 let finalArray = bubbleSort(initialArray);
