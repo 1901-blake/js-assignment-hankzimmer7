@@ -33,19 +33,17 @@ function printShape(shape, height, character) {
       }
       break;
     case 'Triangle':
+    let line = '';
       for (let i = 0; i < height; i++) {
-        let line = '';
-        for (let j = 0; j <= i; j++) {
           line += character;
-        }
         console.log(line);
       }
       break;
     case 'Diamond':
-      for (let i = 0; i <= height; i++) {
+      for (let i = 0; i < height; i++) {
         let line = '';
-        for (let j = 0; j <= height; j++) {
-          let distanceFromCenter = Math.abs(((height - 1) / 2) - i) + Math.abs((height - 1) / 2 - j);
+        for (let j = 0; j < height; j++) {
+          let distanceFromCenter = Math.abs(Math.floor(((height) / 2) - i)) + Math.abs(Math.floor(((height) / 2 - j)));
           if (distanceFromCenter < height / 2) {
             line += character;
           } else {
