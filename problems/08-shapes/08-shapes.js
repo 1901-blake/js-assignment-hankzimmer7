@@ -33,9 +33,9 @@ function printShape(shape, height, character) {
       }
       break;
     case 'Triangle':
-    let line = '';
+      let line = '';
       for (let i = 0; i < height; i++) {
-          line += character;
+        line += character;
         console.log(line);
       }
       break;
